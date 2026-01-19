@@ -18,7 +18,7 @@ async function run() {
         feel: Math.round(d.current.feelslike_c),
         hum: d.current.humidity,
         wind: d.current.wind_kph,
-        aqi: d.current.air_quality['us-epa-index'],
+        aqi: d.current.air_quality ? Math.round(d.current.air_quality['us-epa-index']) : 1,
         time: now
       };
       console.log(`Xong: ${city.name}`);
