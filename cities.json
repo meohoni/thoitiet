@@ -1,0 +1,7 @@
+[
+  { "id": "hanoi", "name": "Hà Nội", "lat": 21.02, "lon": 105.83 },
+  { "id": "saigon", "name": "TP. Hồ Chí Minh", "lat": 10.77, "lon": 106.66 },
+  { "id": "danang", "name": "Đà Nẵng", "lat": 16.06, "lon": 108.22 },
+  { "id": "haiphong", "name": "Hải Phòng", "lat": 20.84, "lon": 106.68 },
+  { "id": "cantho", "name": "Cần Thơ", "lat": 10.03, "lon": 105.78 }
+]
