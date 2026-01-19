@@ -1,0 +1,19 @@
+name: Update Weather
+on:
+  schedule:
+    - cron: '*/15 * * * *' # Chạy mỗi 15 phút
+  workflow_dispatch: # Cho phép bấm nút chạy thử
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: node fetch_weather.js
+        env:
+          WEATHER_IO_KEY: ${{ secrets.WEATHER_IO_KEY }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          EDGE_CONFIG_ID: ${{ secrets.EDGE_CONFIG_ID }}
